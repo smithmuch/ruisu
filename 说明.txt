@@ -1,0 +1,39 @@
+项目地址：
+https://github.com/0oVicero0/serverSpeeder_Install
+
+切换内核：
+yum -y install wget
+
+rpm -ivh https://buildlogs.centos.org/c7.1511.00/kernel/20151119220809/3.10.0-327.el7.x86_64/kernel-3.10.0-327.el7.x86_64.rpm --force
+
+
+rpm -qa | grep kernel
+
+reboot
+
+uname -r
+
+安装：
+yum -y install net-tools
+
+
+wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/smithmuch/ruisu/master/appex.sh" && bash /tmp/appex.sh 'install'
+
+卸载：
+wget --no-check-certificate -qO /tmp/appex.sh "https://raw.githubusercontent.com/smithmuch/ruisu/master/appex.sh" && bash /tmp/appex.sh 'uninstall'
+
+
+启动命令:
+/appex/bin/serverSpeeder.sh start
+
+停止加速:
+/appex/bin/serverSpeeder.sh stop
+
+状态查询:
+/appex/bin/serverSpeeder.sh status
+
+更新许可:
+/appex/bin/serverSpeeder.sh renewLic
+
+重新启动:
+/appex/bin/serverSpeeder.sh restart
